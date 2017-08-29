@@ -28,7 +28,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
-    
+    'my-sample-rest-api.herokuapp.com'
 ]
 
 
