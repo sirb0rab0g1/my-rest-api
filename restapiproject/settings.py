@@ -28,7 +28,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://my-sample-rest-api.herokuapp.com',
+    'my-sample-rest-api.herokuapp.com',
     'https://sirb0rab0g1.github.io/angularjs4-tutorial',
     'localhost'
 ]
