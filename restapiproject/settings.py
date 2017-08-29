@@ -35,7 +35,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = (
-    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,7 +132,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 CORS_ORIGIN_WHITELIST = (
-    'https://my-sample-rest-api.herokuapp.com/',
+    'https://my-sample-rest-api.herokuapp.com',
+    'my-sample-rest-api.herokuapp.com',
     '127.0.0.1',
     'http://localhost:4200',
     'http://localhost:8000',
@@ -142,7 +142,8 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CSRF_TRUSTED_ORIGINS = (
-    'https://my-sample-rest-api.herokuapp.com/',
+    'https://my-sample-rest-api.herokuapp.com',
+    'my-sample-rest-api.herokuapp.com',
     '127.0.0.1',
     'http://localhost:4200',
     'http://localhost:8000',
