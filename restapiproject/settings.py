@@ -28,7 +28,9 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
-    'my-sample-rest-api.herokuapp.com'
+    'https://my-sample-rest-api.herokuapp.com',
+    'https://sirb0rab0g1.github.io/angularjs4-tutorial',
+    'localhost'
 ]
 
 
@@ -129,8 +131,6 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-
 CORS_ORIGIN_WHITELIST = (
     'https://my-sample-rest-api.herokuapp.com',
     'my-sample-rest-api.herokuapp.com',
@@ -138,7 +138,8 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
     'http://localhost:8000',
     'localhost:4200',
-    'localhost:8000'
+    'localhost:8000',
+    'sirb0rab0g1.github.io/angularjs4-tutorial',
 )
 
 CSRF_TRUSTED_ORIGINS = (
@@ -148,7 +149,8 @@ CSRF_TRUSTED_ORIGINS = (
     'http://localhost:4200',
     'http://localhost:8000',
     'localhost:4200',
-    'localhost:8000'
+    'localhost:8000',
+    'sirb0rab0g1.github.io/angularjs4-tutorial',
 )
 
 CORS_ALLOW_METHODS = (
