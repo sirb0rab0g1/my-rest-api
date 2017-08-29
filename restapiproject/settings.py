@@ -28,15 +28,14 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
-    'my-sample-rest-api.herokuapp.com',
-    '127.0.0.1'
+    
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = (
-    'rest_framework',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +43,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+    'corsheaders',
+    
     'credentials',
 )
 
@@ -65,8 +67,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
 )
-
+ 
 ROOT_URLCONF = 'restapiproject.urls'
 
 TEMPLATES = [
@@ -125,3 +129,40 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+CORS_ORIGIN_WHITELIST = (
+    'my-sample-rest-api.herokuapp.com',
+    '127.0.0.1',
+    'http://localhost:4200',
+    'http://localhost:8000',
+    'localhost:4200',
+    'localhost:8000'
+)
+
+CSRF_TRUSTED_ORIGINS = (
+    'my-sample-rest-api.herokuapp.com',
+    '127.0.0.1',
+    'http://localhost:4200',
+    'http://localhost:8000',
+    'localhost:4200',
+    'localhost:8000'
+)
+
+CORS_ALLOW_METHODS = (
+    'GET',
+    'POST',
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
