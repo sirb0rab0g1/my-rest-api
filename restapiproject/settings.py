@@ -133,7 +133,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 CORS_ORIGIN_WHITELIST = (
-    'my-sample-rest-api.herokuapp.com',
+    'https://my-sample-rest-api.herokuapp.com/',
     '127.0.0.1',
     'http://localhost:4200',
     'http://localhost:8000',
@@ -142,7 +142,7 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CSRF_TRUSTED_ORIGINS = (
-    'my-sample-rest-api.herokuapp.com',
+    'https://my-sample-rest-api.herokuapp.com/',
     '127.0.0.1',
     'http://localhost:4200',
     'http://localhost:8000',
