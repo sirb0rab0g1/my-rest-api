@@ -21,7 +21,6 @@ from django.contrib import admin
 
 from rest_framework.routers import DefaultRouter
 
-from credentials import views as credential_view
 from credentials.views import (
     InformationViewSet,
 )
@@ -31,8 +30,10 @@ router.register(r'credentials', InformationViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
+
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^credentials/', include('credentials.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
